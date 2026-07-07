@@ -53,6 +53,10 @@ async def fetch_and_store_cookies():
 
     cookies = (response.text or "").strip()
 
+    print("=== COOKIE DEBUG START ===")
+    print(cookies[:200])
+    print("=== COOKIE DEBUG END ===")
+
     if not cookies.startswith("# Netscape"):
         raise ValueError("⚠️ ɪɴᴠᴀʟɪᴅ ᴄᴏᴏᴋɪᴇ ꜰᴏʀᴍᴀᴛ. ɴᴇᴇᴅs ɴᴇᴛsᴄᴀᴘᴇ ꜰᴏʀᴍᴀᴛ.")
 
